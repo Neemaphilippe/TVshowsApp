@@ -13,6 +13,7 @@ class EpisodeAPIClient {
     func getEpisode(episodeInt: Int, completionHandler: @escaping ((Result<[EpisodeInfo],AppError>)-> Void)){
         
         let urlString =  "http://api.tvmaze.com/shows/\(episodeInt)/episodes"
+        print(urlString)
         
         guard let url = URL(string: urlString) else {
             completionHandler(.failure(.badUrl))

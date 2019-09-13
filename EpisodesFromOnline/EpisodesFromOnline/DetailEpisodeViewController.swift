@@ -8,12 +8,17 @@
 import UIKit
 
 class DetailEpisodeViewController: UIViewController {
+   
     
     
     @IBOutlet weak var episodeTableView: UITableView!
     
     var episodeID : AllInfo!
-    var episodes = [EpisodeInfo]()
+    var episodes = [EpisodeInfo](){
+        didSet{
+            episodeTableView.reloadData()
+        }
+    }
     
 
     override func viewDidLoad() {
@@ -36,12 +41,8 @@ class DetailEpisodeViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
-    
-   
-    }
+}
 
 
 
@@ -60,22 +61,22 @@ extension DetailEpisodeViewController: UITableViewDataSource, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell") as? EpisodeTableViewCell else {return UITableViewCell()}
         let eachEpisode = episodes[indexPath.row]
         cell.episodeTitle.text = eachEpisode.name
-        cell.episodeInfoLabel.text = "Season: \(eachEpisode.season), Episode: \(eachEpisode.id)"
+//        cell.episodeInfoLabel.text = "Season: \(eachEpisode.season), Episode: \(eachEpisode.id)"
         
         
-        guard let imageUrl = eachEpisode.image?.original else {
-            return UITableViewCell()
-        }
-        ImageHelper.shared.getImage(urlStr: imageUrl) { (result) in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let image):
-                DispatchQueue.main.async {
-                    cell.episodeImage.image = image
-                }
-            }
-        }
+//        guard let imageUrl = eachEpisode.image?.original else {
+//            return UITableViewCell()
+//        }
+//        ImageHelper.shared.getImage(urlStr: imageUrl) { (result) in
+//            switch result {
+//            case .failure(let error):
+//                print(error)
+//            case .success(let image):
+//                DispatchQueue.main.async {
+//                    cell.episodeImage.image = image
+//                }
+//            }
+//        }
 
         return cell
     }
