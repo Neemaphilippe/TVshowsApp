@@ -131,14 +131,14 @@
                                                         <constraint firstAttribute="width" constant="140" id="EGK-yh-nW1"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi0-fM-UVd">
-                                                    <rect key="frame" x="318" y="37" width="42" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi0-fM-UVd">
+                                                    <rect key="frame" x="240" y="37" width="120" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz7-Ss-udm">
-                                                    <rect key="frame" x="318" y="90" width="42" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz7-Ss-udm">
+                                                    <rect key="frame" x="240" y="90" width="120" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -153,7 +153,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="tZE-HX-cgo" secondAttribute="bottom" constant="37.5" id="ubC-mn-eQt"/>
                                                 <constraint firstItem="tZE-HX-cgo" firstAttribute="leading" secondItem="YJW-15-9YV" secondAttribute="leading" constant="20" id="vpw-Vi-lbx"/>
                                                 <constraint firstItem="tZE-HX-cgo" firstAttribute="top" secondItem="YJW-15-9YV" secondAttribute="top" constant="37" id="wQC-8H-BJ3"/>
-                                                <constraint firstItem="tZE-HX-cgo" firstAttribute="centerY" secondItem="Dz7-Ss-udm" secondAttribute="centerY" id="yvH-Mk-wwp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
