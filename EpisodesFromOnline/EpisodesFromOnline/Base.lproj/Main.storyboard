@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Episode View Controller-->
         <scene sceneID="5dn-5O-AmO">
             <objects>
-                <viewController id="w5k-zq-IBJ" sceneMemberID="viewController">
+                <viewController id="w5k-zq-IBJ" customClass="DetailEpisodeViewController" customModule="EpisodesFromOnline" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Szx-mO-JRw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeCell" rowHeight="203" id="tkf-9W-aXm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeCell" rowHeight="203" id="tkf-9W-aXm" customClass="EpisodeTableViewCell" customModule="EpisodesFromOnline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="203"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tkf-9W-aXm" id="YJW-15-9YV">
@@ -128,17 +128,17 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-HX-cgo">
                                                     <rect key="frame" x="20" y="37" width="140" height="128"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="140" id="Bsr-HM-7Qe"/>
+                                                        <constraint firstAttribute="width" constant="140" id="EGK-yh-nW1"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi0-fM-UVd">
-                                                    <rect key="frame" x="318" y="37" width="42" height="21"/>
+                                                    <rect key="frame" x="318" y="37" width="42" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz7-Ss-udm">
-                                                    <rect key="frame" x="318" y="91" width="42" height="21"/>
+                                                    <rect key="frame" x="318" y="90" width="42" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -146,16 +146,20 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Dz7-Ss-udm" firstAttribute="top" secondItem="wi0-fM-UVd" secondAttribute="bottom" constant="33" id="38o-ri-2O9"/>
-                                                <constraint firstAttribute="bottom" secondItem="tZE-HX-cgo" secondAttribute="bottom" constant="37.5" id="7TH-Sk-8Qt"/>
-                                                <constraint firstItem="tZE-HX-cgo" firstAttribute="top" secondItem="YJW-15-9YV" secondAttribute="top" constant="37" id="EoC-vL-gGj"/>
                                                 <constraint firstItem="wi0-fM-UVd" firstAttribute="top" secondItem="YJW-15-9YV" secondAttribute="top" constant="37" id="ORg-kk-hAk"/>
-                                                <constraint firstItem="tZE-HX-cgo" firstAttribute="leading" secondItem="YJW-15-9YV" secondAttribute="leading" constant="20" id="WeZ-uE-eDA"/>
                                                 <constraint firstAttribute="bottom" secondItem="Dz7-Ss-udm" secondAttribute="bottom" constant="90.5" id="Y5W-xp-qB7"/>
                                                 <constraint firstAttribute="trailing" secondItem="Dz7-Ss-udm" secondAttribute="trailing" constant="54" id="fE4-V9-6p3"/>
                                                 <constraint firstAttribute="trailing" secondItem="wi0-fM-UVd" secondAttribute="trailing" constant="54" id="s4k-yZ-Bb3"/>
+                                                <constraint firstAttribute="bottom" secondItem="tZE-HX-cgo" secondAttribute="bottom" constant="37.5" id="ubC-mn-eQt"/>
+                                                <constraint firstItem="tZE-HX-cgo" firstAttribute="leading" secondItem="YJW-15-9YV" secondAttribute="leading" constant="20" id="vpw-Vi-lbx"/>
+                                                <constraint firstItem="tZE-HX-cgo" firstAttribute="top" secondItem="YJW-15-9YV" secondAttribute="top" constant="37" id="wQC-8H-BJ3"/>
+                                                <constraint firstItem="tZE-HX-cgo" firstAttribute="centerY" secondItem="Dz7-Ss-udm" secondAttribute="centerY" id="yvH-Mk-wwp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="episodeImage" destination="tZE-HX-cgo" id="aB8-cN-VIS"/>
+                                            <outlet property="episodeInfoLabel" destination="Dz7-Ss-udm" id="LEe-bK-qxF"/>
+                                            <outlet property="episodeTitle" destination="wi0-fM-UVd" id="kv1-Xv-f3T"/>
                                             <segue destination="48T-Cu-QH7" kind="show" id="lCP-xa-q8P"/>
                                         </connections>
                                     </tableViewCell>
@@ -171,6 +175,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dyI-6C-WWX"/>
                     </view>
+                    <connections>
+                        <outlet property="episodeTableView" destination="5xD-aJ-Xbp" id="uFm-hH-yhe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ya-3i-93y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

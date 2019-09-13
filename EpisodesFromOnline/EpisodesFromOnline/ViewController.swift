@@ -48,7 +48,14 @@ class ViewController: UIViewController {
                 
                 
             }
+            
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = showTableView.indexPathForSelectedRow,
+            let destination = segue.destination as? DetailEpisodeViewController else {return}
+        let showInfoToSendOver = shows[indexPath.row]
+        destination.episodeID = showInfoToSendOver
     }
 
 }
