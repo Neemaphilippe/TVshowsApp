@@ -33,8 +33,6 @@ class ViewController: UIViewController {
         showTableView.delegate = self
         showSearchBar.delegate = self
         
-        
-        // Do any additional setup after loading the view.
     }
     private func loadShows(){
         ShowAPIClient.shared.getShow(showTitle: searchedShow) { (result) in

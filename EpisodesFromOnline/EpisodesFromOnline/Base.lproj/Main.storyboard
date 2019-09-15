@@ -166,7 +166,7 @@
                                             <outlet property="episodeImage" destination="tZE-HX-cgo" id="aB8-cN-VIS"/>
                                             <outlet property="episodeInfoLabel" destination="Dz7-Ss-udm" id="LEe-bK-qxF"/>
                                             <outlet property="episodeTitle" destination="wi0-fM-UVd" id="kv1-Xv-f3T"/>
-                                            <segue destination="48T-Cu-QH7" kind="show" id="lCP-xa-q8P"/>
+                                            <segue destination="48T-Cu-QH7" kind="show" id="vXF-Gf-UMX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="1781.1594202898552" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Episode Info View Controller-->
         <scene sceneID="vi5-gC-Uew">
             <objects>
-                <viewController id="48T-Cu-QH7" sceneMemberID="viewController">
+                <viewController id="48T-Cu-QH7" customClass="EpisodeInfoViewController" customModule="EpisodesFromOnline" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9kW-Sx-Ygf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,42 +209,49 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="283" id="Ee6-gR-dPd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeInfoCell" rowHeight="283" id="Ee6-gR-dPd" customClass="EpisodeInfoTableViewCell" customModule="EpisodesFromOnline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="283"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ee6-gR-dPd" id="xLf-tn-Fhv">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ee6-gR-dPd" id="xLf-tn-Fhv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="282.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCl-Px-Z2m">
-                                                    <rect key="frame" x="20" y="56" width="240" height="128"/>
+                                                    <rect key="frame" x="87" y="37" width="240" height="128.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="240" id="9q9-fO-rDR"/>
+                                                        <constraint firstAttribute="height" constant="128" id="rHx-ft-pQY"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc3-CN-pZZ">
-                                                    <rect key="frame" x="314" y="56" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ0-yc-ipH">
+                                                    <rect key="frame" x="186" y="187.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ0-yc-ipH">
-                                                    <rect key="frame" x="314" y="131" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc3-CN-pZZ">
+                                                    <rect key="frame" x="186" y="228.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="eQ0-yc-ipH" secondAttribute="trailing" constant="58" id="K6e-f0-9qL"/>
-                                                <constraint firstItem="mCl-Px-Z2m" firstAttribute="leading" secondItem="xLf-tn-Fhv" secondAttribute="leading" constant="20" id="Obf-Kz-Qds"/>
-                                                <constraint firstAttribute="trailing" secondItem="yc3-CN-pZZ" secondAttribute="trailing" constant="58" id="fJH-yH-MtR"/>
-                                                <constraint firstItem="eQ0-yc-ipH" firstAttribute="top" secondItem="yc3-CN-pZZ" secondAttribute="bottom" constant="54" id="geD-YU-fPM"/>
-                                                <constraint firstItem="yc3-CN-pZZ" firstAttribute="top" secondItem="xLf-tn-Fhv" secondAttribute="top" constant="56" id="oY1-dF-i98"/>
-                                                <constraint firstAttribute="bottom" secondItem="eQ0-yc-ipH" secondAttribute="bottom" constant="130.5" id="r7k-bH-2mS"/>
-                                                <constraint firstAttribute="bottom" secondItem="mCl-Px-Z2m" secondAttribute="bottom" constant="98.5" id="sp9-sy-mac"/>
-                                                <constraint firstItem="yc3-CN-pZZ" firstAttribute="leading" secondItem="mCl-Px-Z2m" secondAttribute="trailing" constant="54" id="tDp-2I-B5x"/>
-                                                <constraint firstItem="mCl-Px-Z2m" firstAttribute="top" secondItem="xLf-tn-Fhv" secondAttribute="top" constant="56" id="xtB-nz-0eG"/>
-                                                <constraint firstItem="eQ0-yc-ipH" firstAttribute="leading" secondItem="mCl-Px-Z2m" secondAttribute="trailing" constant="54" id="yaW-zD-eGn"/>
+                                                <constraint firstItem="yc3-CN-pZZ" firstAttribute="centerY" secondItem="xLf-tn-Fhv" secondAttribute="centerY" id="IZg-Pj-RnS"/>
+                                                <constraint firstItem="yc3-CN-pZZ" firstAttribute="top" secondItem="eQ0-yc-ipH" secondAttribute="bottom" constant="20" id="NkE-CT-cBH"/>
+                                                <constraint firstItem="eQ0-yc-ipH" firstAttribute="top" secondItem="mCl-Px-Z2m" secondAttribute="bottom" constant="22" id="Vqr-Jm-aGG"/>
+                                                <constraint firstItem="mCl-Px-Z2m" firstAttribute="leading" secondItem="xLf-tn-Fhv" secondAttribute="leading" constant="87" id="XyK-Ai-EdB"/>
+                                                <constraint firstItem="mCl-Px-Z2m" firstAttribute="top" secondItem="xLf-tn-Fhv" secondAttribute="top" constant="37" id="jGb-SY-9vx"/>
+                                                <constraint firstItem="eQ0-yc-ipH" firstAttribute="centerX" secondItem="xLf-tn-Fhv" secondAttribute="centerX" id="wmY-5k-DA5"/>
+                                                <constraint firstItem="eQ0-yc-ipH" firstAttribute="centerY" secondItem="xLf-tn-Fhv" secondAttribute="centerY" id="x2F-Ii-7gv"/>
+                                                <constraint firstItem="yc3-CN-pZZ" firstAttribute="centerX" secondItem="xLf-tn-Fhv" secondAttribute="centerX" id="ylb-VK-yRE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="episodeInfoImage" destination="mCl-Px-Z2m" id="mhG-QO-DvR"/>
+                                            <outlet property="episodeInfoSeason" destination="yc3-CN-pZZ" id="5W1-MM-awB"/>
+                                            <outlet property="episodeInfoTitle" destination="eQ0-yc-ipH" id="8HH-jJ-EbG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -258,6 +265,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0sf-Vi-Mj4"/>
                     </view>
+                    <connections>
+                        <outlet property="episodeInfoTableView" destination="Zud-G9-Uxm" id="KLB-xi-54b"/>
+                        <outlet property="episodeSummary" destination="1Tf-Y3-wdi" id="Z1q-g3-w0l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22p-Ba-pps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
