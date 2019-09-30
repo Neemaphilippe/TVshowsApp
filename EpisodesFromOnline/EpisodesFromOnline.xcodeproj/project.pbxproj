@@ -27,7 +27,6 @@
 		55E38505232B505A007762A0 /* DetailEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E38504232B505A007762A0 /* DetailEpisodeViewController.swift */; };
 		55E38507232B5254007762A0 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E38506232B5254007762A0 /* EpisodeTableViewCell.swift */; };
 		55E38509232DBFD8007762A0 /* EpisodeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E38508232DBFD8007762A0 /* EpisodeInfoViewController.swift */; };
-		55E3850B232DBFF9007762A0 /* EpisodeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3850A232DBFF9007762A0 /* EpisodeInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 		55E38504232B505A007762A0 /* DetailEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEpisodeViewController.swift; sourceTree = "<group>"; };
 		55E38506232B5254007762A0 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		55E38508232DBFD8007762A0 /* EpisodeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeInfoViewController.swift; sourceTree = "<group>"; };
-		55E3850A232DBFF9007762A0 /* EpisodeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 				55E384C623282CD4007762A0 /* Main.storyboard */,
 				55E384FA23298CCC007762A0 /* ShowTableViewCell.swift */,
 				55E38506232B5254007762A0 /* EpisodeTableViewCell.swift */,
-				55E3850A232DBFF9007762A0 /* EpisodeInfoTableViewCell.swift */,
 				55E384F22328575C007762A0 /* NetworkManager.swift */,
 				55E384F423285792007762A0 /* AppError.swift */,
 				55E384F82329870D007762A0 /* ShowInfo.swift */,
@@ -298,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E384F523285792007762A0 /* AppError.swift in Sources */,
-				55E3850B232DBFF9007762A0 /* EpisodeInfoTableViewCell.swift in Sources */,
 				5536CB80232DC4EA00847286 /* EpisodeInfoAPIClient.swift in Sources */,
 				55E38503232B4F49007762A0 /* EpisodeAPIClient.swift in Sources */,
 				55E384F32328575C007762A0 /* NetworkManager.swift in Sources */,
