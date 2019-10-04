@@ -30,21 +30,6 @@ class EpisodeInfoViewController: UIViewController {
 
     }
     
-//    private func loadEpisodeDetails(){
-//        EpisodeInfoAPIClient.shared.getEpisodeInfo(edInt: episodeSource.id) {(result) in
-//            DispatchQueue.main.async {
-//                switch result {
-//                case .failure(let error):
-//                    print(error)
-//                case .success(let EpisodeDetailInfo):
-//                    self.currentEpisode = EpisodeDetailInfo
-//                }
-//            }
-//
-//
-//        }
-//
-//    }
     private func loadViews(){
 //        self.episodeDetailImage = episodeSource?.image?.original
         self.episodeDetailTitleLabel.text = "Title: \(episodeSource.name)"
